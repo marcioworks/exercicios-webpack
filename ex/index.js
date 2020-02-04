@@ -1,3 +1,14 @@
-const logger = require('./logger')
+const produto ={
+    nome:"caneta bic preta",
+    preco:1.90,
+    desconto:0.05
+}
 
-logger.info('testando webpack!')
+function clone(objeto){
+    return {...objeto}
+}
+
+const novoProduto = clone(produto)
+novoProduto.nome="  caneta bic azul"
+
+console.log(produto, novoProduto)
